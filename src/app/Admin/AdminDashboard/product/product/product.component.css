@@ -1,0 +1,30 @@
+
+.btn-position{
+    margin-left: 700px; 
+    background-image: linear-gradient(navy,rgb(96, 96, 238));
+    height:50px;
+    width: 50px;
+    text-align: center;
+}
+
+.addbtn{
+
+    height:50px;
+    width: 100px;
+
+}
+
+.cbtn{
+    height:50px;
+    width: 100px;
+}
+
+.imgSize{
+    height:100px;
+    width: 100px;   
+   
+}
+
+.grid-height{
+    height: 1500px;
+}

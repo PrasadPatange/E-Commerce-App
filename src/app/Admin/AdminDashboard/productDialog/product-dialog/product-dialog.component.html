@@ -1,0 +1,26 @@
+<div class="container ms-auto">
+  <mat-toolbar>
+    <span class="fill-remaining-space"></span>
+    <button
+      class="btn-dialog-close"
+      mat-stroked-button
+      (click)="onClose()"
+      tabIndex="-1"
+    >
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-toolbar>
+  <h1 class="text-center mt-3">
+    <mat-icon>check_circle</mat-icon> Operation Completed Successfully !!!
+  </h1>
+  <div class="text-center">
+    <button
+      mat-raised-button
+      class="cbtn mb-3"
+      color="warn"
+      (click)="onClose()"
+    >
+      Close
+    </button>
+  </div>
+</div>

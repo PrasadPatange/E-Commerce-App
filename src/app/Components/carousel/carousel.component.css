@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+img{
+    height: 400px;
+    width: 300px;
+}
+.inner{
+    margin-left: 539px !important;
+    
+    margin-bottom: 50px  !important;
+}
+.inner > h1{
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 70px !important;
+    color: red;
+   
+}
+.inner > h3{
+    color: black;
+    animation: Slide_Up 2.1s ease;
+}
+.inner > p{
+    color: black;
+    animation: Slide_Up 2.2s ease;
+}
+.inner > button{
+    animation: Slide_Up 2.4s ease;
+}
+
+
+@keyframes Slide_Up{
+    0%{
+        transform: translateY(250px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}

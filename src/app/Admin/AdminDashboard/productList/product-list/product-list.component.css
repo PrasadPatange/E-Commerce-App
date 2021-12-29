@@ -1,0 +1,68 @@
+
+.btn-position{
+    margin-left: 700px; 
+    background-image: linear-gradient(navy,rgb(96, 96, 238));
+    height:50px;
+    width: 50px;
+    text-align: center;
+}
+table {
+    width: 100%;
+  }
+
+  .radius{
+    border-radius: 35px;
+  }
+
+  .fill-remaining-space{
+    flex: 1 1 auto;
+}
+
+  form.normal-form{
+    margin: 10px;
+}
+
+
+
+.button-row button{
+    margin: 5px;
+}
+  .dialog-container {
+    padding: 19px;
+    border-radius: 4px;
+    width: 700px;
+    height: 380px;
+    
+  }
+
+   form.normal-form{
+    margin: 10px;
+}
+
+  .add-bottom-padding{
+        padding-bottom: 10px;
+    }
+ 
+
+.button-row button{
+    margin: 5px;
+}
+
+  .hide{
+    display: none;
+}
+
+/* for dialog pop-up */
+  .btn-dialog-close{
+    width: 45px;
+    min-width: 0px !important;
+    height: 40px;
+    padding: 0px !important;
+
+  }
+
+  .imgSize{
+    height:100px;
+    width: 100px;
+  }
+  

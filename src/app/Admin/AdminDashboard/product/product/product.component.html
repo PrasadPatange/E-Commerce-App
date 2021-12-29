@@ -1,0 +1,99 @@
+<div class="container dialog-container">
+  <mat-toolbar>
+    <span>{{
+      service.form.controls["$key"].value ? "Edit Product" : "Add Product"
+    }}</span>
+    <span class="fill-remaining-space"></span>
+    <button
+      class="btn-dialog-close"
+      mat-stroked-button
+      (click)="onClose()"
+      tabIndex="-1"
+    >
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="text-center">
+    <form
+      [formGroup]="service.form"
+      class="normal-form mb-5"
+      (submit)="onSubmit()"
+    >
+      <div class="controles-container">
+        <input type="hidden" formControlName="$key" />
+        <br /><br /><br /><br />
+
+        <div
+          class="imagePreview"
+          *ngIf="service.imageURL && service.imageURL !== ''"
+        >
+          <img
+            [src]="service.imageURL"
+            *ngIf="service.imageURL"
+            [alt]="service.form.value.name"
+            class="imgSize"
+          />
+        </div>
+        <br />
+        <input
+          type="file"
+          accept="image/*"
+          (change)="service.showPreview($event)"
+        />
+
+        <br />
+        <mat-form-field>
+          <mat-label>Product Title : </mat-label> &nbsp;
+          <input formControlName="title" matInput placeholder="Enter Title" />
+          <mat-error *ngIf="service.form.controls['title'].errors?.['required']"
+            >This field is mandatory.</mat-error
+          >
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Product Description : </mat-label>
+          <input
+            formControlName="description"
+            matInput
+            placeholder="Enter Description"
+          />
+          <mat-error
+            *ngIf="service.form.controls['description'].errors?.['required']"
+            >This field is mandatory.</mat-error
+          >
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Product Price : </mat-label>
+          <input formControlName="price" matInput placeholder="Enter Price" />
+          <mat-error *ngIf="service.form.controls['price'].errors?.['required']"
+            >This field is mandatory.</mat-error
+          >
+        </mat-form-field>
+        <br />
+        <div class="example-button-row text-center">
+          <button
+            mat-raised-button
+            class="cbtn mb-3"
+            color="warn"
+            (click)="onClear()"
+          >
+            Clear
+          </button>
+          &nbsp;
+          <button
+            mat-raised-button
+            class="addbtn"
+            color="primary"
+            type="submit"
+            (click)="onSubmit()"
+            [disabled]="service.form.invalid"
+          >
+            {{ service.form.controls["$key"].value ? "Update" : "Add" }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

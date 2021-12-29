@@ -1,0 +1,47 @@
+<br />
+<div class="example-container shadow p-3 mb-5 bg-body rounded container">
+  <div class="form-container">
+    <h1 class="text-center">Admin Sign In</h1>
+    <form [formGroup]="loginForm" class="mb-5">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> E-mail </mat-label>
+        <input matInput formControlName="email" #emailSignin required />
+
+        <mat-error *ngIf="loginForm.controls['email'].errors?.['required']"
+          >This field is mandatory.</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Password </mat-label>
+        <input
+          matInput
+          formControlName="password"
+          [type]="hide ? 'password' : 'text'"
+          #passwordSignin
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+        <mat-error *ngIf="loginForm.controls['email'].errors?.['required']"
+          >This field is mandatory.</mat-error
+        >
+      </mat-form-field>
+      <div class="d-grid">
+        <button
+          mat-raised-button
+          color="warn"
+          [disabled]="!this.loginForm.valid"
+          (click)="onSignin(emailSignin.value, passwordSignin.value)"
+        >
+          Sign In
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

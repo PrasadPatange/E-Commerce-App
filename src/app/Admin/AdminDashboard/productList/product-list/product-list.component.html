@@ -1,0 +1,71 @@
+<div class="container mt-3 ms-auto">
+  <div class="mb-3">
+    <button
+      mat-raised-button
+      color="primary"
+      class="btn-position"
+      (click)="onCreate()"
+    >
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+  </div>
+</div>
+
+<table class="table table-light table-hover shadow p-3 mb-5 bg-body rounded">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Image</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of productArray; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        <img
+          [src]="item?.image !== null ? item?.image : imgUrl"
+          height="35px"
+          width="35px"
+          class="radius"
+        />
+      </td>
+      <td>{{ item?.title }}</td>
+      <td>{{ item?.description }}</td>
+      <td>{{ item?.price }}</td>
+      <td>
+        <mat-drawer-container class="example-container" autosize>
+          <mat-drawer #drawer class="example-sidenav" mode="side">
+            <button mat-icon-button (click)="onEdit(item)">
+              <mat-icon>launch</mat-icon>
+            </button>
+            &nbsp;
+            <button
+              mat-icon-button
+              color="warn"
+              (click)="onDelete(item.title, item.$key!)"
+            >
+              <mat-icon>delete_outline</mat-icon>
+            </button>
+            &nbsp;
+          </mat-drawer>
+
+          <div class="example-sidenav-content">
+            <button
+              type="button"
+              color="primary"
+              mat-icon-button
+              (click)="drawer.toggle()"
+            >
+              <mat-icon>arrow_left</mat-icon>
+            </button>
+          </div>
+        </mat-drawer-container>
+      </td>
+    </tr>
+  </tbody>
+</table>

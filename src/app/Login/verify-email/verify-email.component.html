@@ -1,0 +1,26 @@
+<br />
+<div class="example-container shadow p-3 mb-5 bg-body rounded container">
+  <div class="form-container">
+    <h1 class="text-center">Thank You for Registering</h1>
+    <form class="mb-5">
+      <div class="formGroup" *ngIf="logService.verify_Email">
+        <p class="text-center">
+          We have sent a confirmation email to
+          <strong>{{ logService.verify_Email }}</strong
+          >.
+        </p>
+        <p class="text-center">
+          Please check your email and click on the link to verfiy your email
+          address.
+        </p>
+      </div>
+
+      <!-- <div class="formGroup">
+                 <button mat-raised-button color="primary"  (click)="SendVerificationMail()">Resend Verification Email</button>
+              </div> -->
+
+      <br />
+      <p>Go back to? <a routerLink="/login">Sign in</a></p>
+    </form>
+  </div>
+</div>

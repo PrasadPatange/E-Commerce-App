@@ -1,0 +1,43 @@
+.price{
+    color: red;
+}
+
+.zoom {
+    /* width: 350px;
+    height: 350px; */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.zoom img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.zoom:hover img {
+    transform: scale(1.1);
+}
+
+.inner{
+    /* height: 35px;
+    width: 100px; */
+    background-color: white;
+    position: absolute;
+    top:170px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    opacity: 0;
+
+}
+.inner:hover{
+    opacity: 1;
+}
+.col{
+    background-color: white;
+}
+.col:hover{
+    background-color: red;
+}

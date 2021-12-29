@@ -1,0 +1,32 @@
+<h1 class="text-center">
+  <b>{{ userName }}</b> are Logged In
+</h1>
+<div class="d-flex justify-content-end">
+  <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+</div>
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of productArray">
+      <div
+        class="card shadow p-3 mb-5 bg-body rounded text-center"
+        style="width: 18rem"
+      >
+        <img
+          [src]="item?.image"
+          style="height: 200px; width: 200px"
+          class="card-img-top"
+          alt="item?.Title"
+        />
+        <div class="card-body">
+          <h1 class="card-text">
+            <b>{{ item?.title }}</b>
+          </h1>
+          <p class="card-text"><b>Description : </b>{{ item?.description }}</p>
+          <h3 class="card-text">
+            Price : <b>${{ item?.price }}</b>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

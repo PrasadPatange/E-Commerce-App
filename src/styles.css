@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+@import "~bootstrap-icons/font/bootstrap-icons.css"; 
+@import '~ngx-toastr/toastr';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+/* Product */
+.fill-remaining-space{
+    flex: 1 1 auto;
+}
+  form.normal-form{
+    margin: 10px;
+}
+
+
+
+.button-row button{
+    margin: 5px;
+}
+  .dialog-container {
+    padding: 19px;
+    border-radius: 4px;
+    width: 700px;
+    height: 380px;
+    
+  }
+
+   form.normal-form{
+    margin: 10px;
+}
+
+
+
+    .add-bottom-padding{
+        padding-bottom: 10px;
+    }
+ 
+
+.button-row button{
+    margin: 5px;
+}
+
+
+
+ 
+  .hide{
+    display: none;
+}
+
+
+  .btn-dialog-close{
+    width: 45px;
+    min-width: 0px !important;
+    height: 40px;
+    padding: 0px !important;
+
+  }
+
+  .imgSize{
+    height:100px;
+    width: 100px;
+  }
+  /* Product End */

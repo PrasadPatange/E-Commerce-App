@@ -1,0 +1,30 @@
+.navbar{
+    font-size: 16px !important;
+    font-family: "Jost",sans-serif !important;
+    color: #141517 !important;
+    font-weight: 600 !important;
+    padding: 34px 21px !important;
+    text-transform: capitalize !important;
+    
+}
+.logo{
+    margin-right: 37px;
+}
+.nav-item{
+    margin: 10px;
+}
+.nav-link:hover{
+    color: red !important;
+}
+
+.shopNow{
+    color: #CEBD9C !important;
+    font-weight: 500;
+    font-size: 16px;
+}
+.bgpara{
+    background-color: #16161A;
+    color: white;
+    font-size: 16px;
+    padding:11px;
+}
